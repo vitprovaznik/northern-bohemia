@@ -1,0 +1,15 @@
+// ==========================================================================
+// HLAVNÍ SCSS SOUBOR (screen.scss)
+// ==========================================================================
+
+// 1. UTILS
+@import "utils/*";
+
+// 2. BASE
+@import "base/*";
+
+// 3. LAYOUT
+@import "layout/*";
+
+// 4. COMPONENTS
+@import "components/*";

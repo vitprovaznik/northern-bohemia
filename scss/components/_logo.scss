@@ -1,0 +1,12 @@
+.logo-north-bohemia{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+}
+.logo-text {
+  color: $color-magnetic-blue;
+  font-size: 1.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}

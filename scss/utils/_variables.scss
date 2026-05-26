@@ -1,0 +1,97 @@
+// ==========================================================================
+// SCSS PROMĚNNÉ (utils/_variables.scss)
+// ==========================================================================
+
+// --------------------------------------------------------------------------
+// 1. ZÁKLADNÍ BARVY (Color styles)
+// --------------------------------------------------------------------------
+$color-crystal-white: #ffffff;
+$color-ice-grey:      #DCDCD7; 
+$color-magnetic-blue: #0E1D43; 
+$color-northern-blue: #69C9CD; 
+
+
+// --------------------------------------------------------------------------
+// 2. BAREVNÉ ŠKÁLY (Palettes)
+// --------------------------------------------------------------------------
+
+// Paleta: Ice Grey
+$ice-grey-10: #EFEFEA; 
+$ice-grey-20: #DCDCD7; // Base
+$ice-grey-30: #C4C4BE;
+$ice-grey-40: #ACACA5;
+$ice-grey-50: #94948C;
+$ice-grey-60: #7C7C73;
+$ice-grey-70: #64645A;
+$ice-grey-80: #4C4C41;
+$ice-grey-90: #343428;
+$ice-grey-100: #1C1C0F;
+
+// Paleta: Magnetic Blue
+$magnetic-blue-10: #E7E8EE; 
+$magnetic-blue-20: #CFD2DB;
+$magnetic-blue-30: #B7BBC8;
+$magnetic-blue-40: #9FA5B5;
+$magnetic-blue-50: #878EA2;
+$magnetic-blue-60: #6F778F;
+$magnetic-blue-70: #57617C;
+$magnetic-blue-80: #3E4A69;
+$magnetic-blue-90: #263456;
+$magnetic-blue-100: #0E1D43; // Base
+
+// Paleta: Northern Blue
+$northern-blue-10: #E1F4F5; 
+$northern-blue-20: #C3EAEB;
+$northern-blue-30: #A5DFE1;
+$northern-blue-40: #87D4D7;
+$northern-blue-50: #69C9CD; // Base
+$northern-blue-60: #54A1A4;
+$northern-blue-70: #3F797B;
+$northern-blue-80: #2A5052;
+$northern-blue-90: #152829;
+$northern-blue-100: #040808;
+
+
+// --------------------------------------------------------------------------
+// 3. TYPOGRAFIE (Text styles)
+// --------------------------------------------------------------------------
+// Font-family
+$font-hlavni: "Basis Grotesque Pro", sans-serif;
+
+// --- NADPISY (Headings) ---
+// H1: 128/100
+$font-size-h1: 128px;
+$line-height-h1: 1;
+
+// H2: 72/100
+$font-size-h2: 72px;
+$line-height-h2: 1;
+
+// H3: 40/110
+$font-size-h3: 40px;
+$line-height-h3: 1.1;
+
+// H4: 24/110
+$font-size-h4: 24px;
+$line-height-h4: 1.1;
+
+// H5: 20/100
+$font-size-h5: 20px;
+$line-height-h5: 1;
+
+// --- ODSTAVCE (Paragraphs) ---
+// p big: 24/120
+$font-size-p-big: 24px;
+$line-height-p-big: 1.2;
+
+// p normal: 18/120
+$font-size-p-normal: 18px;
+$line-height-p-normal: 1.2;
+
+// p small: 16/120
+$font-size-p-small: 16px;
+$line-height-p-small: 1.2;
+
+// p mini: 14/100
+$font-size-p-mini: 14px;
+$line-height-p-mini: 1;

@@ -212,6 +212,12 @@
           --end-top: 77px;
           --end-left: 48%;
         }
+        @media (max-width: 470px) {
+          --start-top: 70px;
+          --start-left: 60%;
+          --end-top: 99px;
+          --end-left: 40%;
+        }
         @media (max-width: 450px) {
           --start-top: 70px;
           --start-left: 60%;

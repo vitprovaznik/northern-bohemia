@@ -3,7 +3,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  padding: 0 0 100px max(0px, calc((100% - 1400px) / 2));
+  padding: 0 0 100px max(2rem, calc((100% - 1400px) / 2));
+
+  @media (min-width: 1450px) {
+    padding-right: max(2rem, calc((100% - 1400px) / 2));
+  }
 
   &__content {
     flex: 0 0 35%;
@@ -11,7 +15,7 @@
   }
 
   &__title {
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 4.5rem */
@@ -22,7 +26,7 @@
 
   &__desc {
     color: $color-magnetic-blue;
-    font-size: 2.5rem;
+    font-size: clamp(1.25rem, 2.8vw, 2.5rem);
     font-style: normal;
     font-weight: 400;
     line-height: 110%; /* 2.75rem */
@@ -73,13 +77,14 @@
     }
 
     &__title {
-      font-size: 2.5rem;
       margin-bottom: 24px;
     }
 
     &__desc {
-      font-size: 1.125rem;
-      margin-bottom: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 1.25rem */
+      letter-spacing: -0.0125rem;
     }
 
     &__map {

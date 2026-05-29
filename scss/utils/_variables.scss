@@ -6,57 +6,55 @@
 // 1. ZÁKLADNÍ BARVY (Color styles)
 // --------------------------------------------------------------------------
 $color-crystal-white: #ffffff;
-$color-ice-grey:      #DCDCD7; 
-$color-magnetic-blue: #0E1D43; 
-$color-northern-blue: #69C9CD; 
-
+$color-ice-grey: #dcdcd7;
+$color-magnetic-blue: #0e1d43;
+$color-northern-blue: #69c9cd;
 
 // --------------------------------------------------------------------------
 // 2. BAREVNÉ ŠKÁLY (Palettes)
 // --------------------------------------------------------------------------
 
 // Paleta: Ice Grey
-$ice-grey-10: #EFEFEA; 
-$ice-grey-20: #DCDCD7; // Base
-$ice-grey-30: #C4C4BE;
-$ice-grey-40: #ACACA5;
-$ice-grey-50: #94948C;
-$ice-grey-60: #7C7C73;
-$ice-grey-70: #64645A;
-$ice-grey-80: #4C4C41;
+$ice-grey-10: #efefea;
+$ice-grey-20: #dcdcd7; // Base
+$ice-grey-30: #c4c4be;
+$ice-grey-40: #acaca5;
+$ice-grey-50: #94948c;
+$ice-grey-60: #7c7c73;
+$ice-grey-70: #64645a;
+$ice-grey-80: #4c4c41;
 $ice-grey-90: #343428;
-$ice-grey-100: #1C1C0F;
+$ice-grey-100: #1c1c0f;
 
 // Paleta: Magnetic Blue
-$magnetic-blue-10: #E7E8EE; 
-$magnetic-blue-20: #CFD2DB;
-$magnetic-blue-30: #B7BBC8;
-$magnetic-blue-40: #9FA5B5;
-$magnetic-blue-50: #878EA2;
-$magnetic-blue-60: #6F778F;
-$magnetic-blue-70: #57617C;
-$magnetic-blue-80: #3E4A69;
+$magnetic-blue-10: #e7e8ee;
+$magnetic-blue-20: #cfd2db;
+$magnetic-blue-30: #b7bbc8;
+$magnetic-blue-40: #9fa5b5;
+$magnetic-blue-50: #878ea2;
+$magnetic-blue-60: #6f778f;
+$magnetic-blue-70: #57617c;
+$magnetic-blue-80: #3e4a69;
 $magnetic-blue-90: #263456;
-$magnetic-blue-100: #0E1D43; // Base
+$magnetic-blue-100: #0e1d43; // Base
 
 // Paleta: Northern Blue
-$northern-blue-10: #E1F4F5; 
-$northern-blue-20: #C3EAEB;
-$northern-blue-30: #A5DFE1;
-$northern-blue-40: #87D4D7;
-$northern-blue-50: #69C9CD; // Base
-$northern-blue-60: #54A1A4;
-$northern-blue-70: #3F797B;
-$northern-blue-80: #2A5052;
+$northern-blue-10: #e1f4f5;
+$northern-blue-20: #c3eaeb;
+$northern-blue-30: #a5dfe1;
+$northern-blue-40: #87d4d7;
+$northern-blue-50: #69c9cd; // Base
+$northern-blue-60: #54a1a4;
+$northern-blue-70: #3f797b;
+$northern-blue-80: #2a5052;
 $northern-blue-90: #152829;
 $northern-blue-100: #040808;
-
 
 // --------------------------------------------------------------------------
 // 3. TYPOGRAFIE (Text styles)
 // --------------------------------------------------------------------------
 // Font-family
-$font-hlavni: "Basis Grotesque Pro", sans-serif;
+$font-hlavni: "BasisGrotesquePro", sans-serif;
 
 // --- NADPISY (Headings) ---
 // H1: 128/100

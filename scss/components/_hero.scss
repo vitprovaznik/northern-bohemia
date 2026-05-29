@@ -1,0 +1,266 @@
+.hero {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 8rem; // Pridan padding zespodu, aby obsah nebyl prilepeny uplne na hranu obrazku
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @media (max-width: 1450px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media (max-width: 991px) {
+    padding-bottom: 4rem;
+  }
+
+  a {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+    letter-spacing: -0.2px;
+    color: $color-magnetic-blue;
+    text-decoration: none;
+  }
+  .hero__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .slider-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    span {
+      padding: 1rem;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      border-radius: 999px;
+    }
+  }
+  .left-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @media (max-width: 991px) {
+      
+    } 
+  }
+  .hero_bigtext {
+    position: relative;
+    height: 260px;
+
+    .hero__text {
+      position: absolute;
+      font-size: clamp(88px, 7.5vw, 112px);
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #0e1d43;
+      white-space: nowrap;
+
+      // APLIKACE JEDNÉ SPOLEČNÉ ANIMACE PRO VŠECHNA SLOVA
+      animation: suck-word 2s cubic-bezier(0.9, 0, 1, 1) both;
+
+      @media (max-width: 991px) {
+        font-size: clamp(64px, 12vw, 76px);
+      }
+
+      // =========================================================
+      // 1. SLOVO
+      // =========================================================
+      &:nth-child(1) {
+        // Výchozí hodnoty pro velký monitor
+        --start-top: 150px;
+        --start-left: 13%;
+        --end-top: 0px;
+        --end-left: 23%;
+        --end-rot: 20.771deg;
+
+        // Přepis pro mobily
+        @media (max-width: 1130px) {
+          --end-left: 22%;
+        }
+        @media (max-width: 991px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: 17%;
+        }
+        @media (max-width: 930px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: 13%;
+        }
+        @media (max-width: 850px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: 11%;
+        }
+        @media (max-width: 790px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: 7%;
+        }
+        @media (max-width: 750px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: 4%;
+        }
+        @media (max-width: 710px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: 0%;
+        }
+        @media (max-width: 570px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: -6%;
+        }
+        @media (max-width: 420px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: -6px;
+          --end-left: -6%;
+        }
+        
+      }
+
+      // =========================================================
+      // 2. SLOVO
+      // =========================================================
+      &:nth-child(2) {
+        --start-top: 150px;
+        --start-left: 36%;
+        --end-top: 10px;
+        --end-left: 38%;
+        --end-rot: -3.008deg;
+
+        @media (max-width: 991px) {
+          --start-top: 70px;
+          --start-left: 31%;
+          --end-top: 0px;
+          --end-left: 35%;
+        }
+        @media (max-width: 930px) {
+          --start-top: 70px;
+          --start-left: 31%;
+          --end-top: 0px;
+          --end-left: 33%;
+        }
+        @media (max-width: 790px) {
+          --start-top: 70px;
+          --start-left: 31%;
+          --end-top: 0px;
+          --end-left: 30%;
+        }
+        @media (max-width: 750px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: 0px;
+          --end-left: 29%;
+        }
+        @media (max-width: 700px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: 0px;
+          --end-left: 27%;
+        }
+        @media (max-width: 570px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: 0px;
+          --end-left: 27%;
+        }
+        @media (max-width: 420px) {
+          --start-top: 70px;
+          --start-left: 2%;
+          --end-top: 0px;
+          --end-left: 30%;
+        }
+      }
+
+      // =========================================================
+      // 3. SLOVO
+      // =========================================================
+      &:nth-child(3) {
+        --start-top: 150px;
+        --start-left: 57%;
+        --end-top: 100px;
+        --end-left: 50%;
+        --end-rot: -16.66deg;
+
+        @media (max-width: 1350px){
+          --end-top: 90px;
+        }
+        @media (max-width: 1240px){
+          --end-top: 80px;
+        }
+
+        @media (max-width: 991px) {
+          --start-top: 70px;
+          --start-left: 60%;
+          --end-top: 77px;
+          --end-left: 48%;
+        }
+        @media (max-width: 450px) {
+          --start-top: 70px;
+          --start-left: 60%;
+          --end-top: 99px;
+          --end-left: 30%;
+        }
+      }
+    }
+  }
+
+  // =========================================================
+  // JEDINÝ UNIVERZÁLNÍ KEYFRAME (Místo původních devíti!)
+  // =========================================================
+  @keyframes suck-word {
+    0% {
+      top: var(--start-top);
+      left: var(--start-left);
+      transform: rotate(0deg);
+      transform-origin: left center;
+    }
+    100% {
+      top: var(--end-top);
+      left: var(--end-left);
+      transform: rotate(var(--end-rot));
+      transform-origin: left center;
+    }
+  }
+
+  // =========================================================
+  // TVŮJ ZBYTEK KÓDU (Tlačítka a navigace pro mobily)
+  // =========================================================
+  @media (max-width: 991px) {
+    .hero__bottom {
+      align-items: flex-end;
+    }
+
+    .left-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      a {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    .slider-nav span {
+      padding: 0.75rem;
+    }
+  }
+}

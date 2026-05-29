@@ -1,10 +1,38 @@
 body {
   margin: 0;
+  font-family: $font-hlavni;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 header {
-  height: 85svh;
   height: 85vh;
-  background-image: url(../../assets/images/hero-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative; // Pro možnost absolutního posunu hero sekce
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 991px) {
+    height: 95vh;
+  }
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // 2. ZÁSADNÍ KROK: Donutí obrázek vyplnit prostor bez zdeformování poměru stran
+    object-fit: cover;
+    object-position: top;
+
+    @media (max-width: 991px) {
+      object-position: 35% top;
+    }
+
+    // 3. ZÁSADNÍ KROK: Pošle obrázek do pozadí (za navigaci a text)
+    z-index: -1;
+  }
 }

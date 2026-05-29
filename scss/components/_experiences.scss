@@ -4,7 +4,7 @@
 
 .experiences {
   padding: 80px 0;
-  background-color: $color-crystal-white;
+  background-color: $color-northern-blue;
   position: relative;
   overflow: hidden;
 
@@ -77,7 +77,7 @@
     }
 
     &:hover {
-      color: $color-northern-blue;
+      color: $color-crystal-white;
 
       svg {
         transform: translateX(4px);
@@ -106,10 +106,9 @@
 .experience-card {
   display: block;
   position: relative;
-  border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   background-color: $ice-grey-20;
   transition: transform 0.3s ease;
 
@@ -121,17 +120,21 @@
     }
   }
 
-  &__image-placeholder {
+  &__image {
     position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $ice-grey-30;
-    color: $color-magnetic-blue;
-    font-size: 24px;
-    font-weight: bold;
-    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    .experience-card__image {
+      transform: scale(1.05);
+    }
   }
 
   &__content {
@@ -143,26 +146,30 @@
     padding: 24px;
     background: linear-gradient(
       to bottom,
-      rgba($color-magnetic-blue, 0.4) 0%,
+      rgba(0, 0, 0, 0.7) 0%,
       transparent 30%,
       transparent 70%,
-      rgba($color-magnetic-blue, 0.6) 100%
+      rgba(0, 0, 0, 0.8) 100%
     );
     color: $color-crystal-white;
   }
 
   &__title {
-    font-size: $font-size-h4;
-    line-height: $line-height-h4;
-    font-weight: bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 26.4px */
+    letter-spacing: -0.24px;
     margin: 0;
     max-width: 80%;
   }
 
   &__action {
-    font-size: $font-size-p-mini;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    letter-spacing: -0.16px;
     display: inline-flex;
     align-items: center;
     gap: 8px;

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: $font-hlavni;
+  overflow-x: hidden;
 }
 *,
 *::before,
@@ -34,5 +35,13 @@ header {
 
     // 3. ZÁSADNÍ KROK: Pošle obrázek do pozadí (za navigaci a text)
     z-index: -1;
+  }
+
+  &.header--subpage > img {
+    object-position: right center; // Přidáno na žádost - posun úplně doprava na desktopu
+    
+    @media (max-width: 991px) {
+      object-position: 82% top;
+    }
   }
 }

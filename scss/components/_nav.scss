@@ -39,7 +39,8 @@ nav {
       padding: 1.5rem 20px;
     }
 
-    .list-left, .list-right {
+    .list-left,
+    .list-right {
       display: none;
     }
 
@@ -48,10 +49,10 @@ nav {
       align-items: center;
       gap: 8px;
       padding: 8px 16px;
-      border: 1px solid #0E1D43; /* using hex to be safe if variables are not in scope */
+      border: 1px solid #0e1d43; /* using hex to be safe if variables are not in scope */
       border-radius: 999px;
       background: transparent;
-      color: #0E1D43;
+      color: #0e1d43;
       font-size: 16px;
       font-weight: 500;
       cursor: pointer;

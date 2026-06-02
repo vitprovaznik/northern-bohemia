@@ -31,3 +31,29 @@ if (nav) {
     }
   });
 }
+
+// Experiences Slider logic
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderWrapper = document.querySelector('.experiences__slider-wrapper');
+  const btnPrev = document.querySelector('.experiences__btn-prev');
+  const btnNext = document.querySelector('.experiences__btn-next');
+
+  if (sliderWrapper && btnPrev && btnNext) {
+    btnPrev.addEventListener('click', () => {
+      // Find the first card to get its current dynamic width
+      const firstCard = sliderWrapper.querySelector('.experience-card');
+      if (firstCard) {
+        const scrollAmount = firstCard.offsetWidth + 24; // Card width + gap
+        sliderWrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      }
+    });
+
+    btnNext.addEventListener('click', () => {
+      const firstCard = sliderWrapper.querySelector('.experience-card');
+      if (firstCard) {
+        const scrollAmount = firstCard.offsetWidth + 24; // Card width + gap
+        sliderWrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    });
+  }
+});

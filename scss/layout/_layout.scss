@@ -13,6 +13,7 @@ header {
   position: relative; // Pro možnost absolutního posunu hero sekce
   display: flex;
   flex-direction: column;
+  overflow: hidden; // Zabrání "vytékání" zvětšeného obrázku
 
   @media (max-width: 991px) {
     height: 95vh;
@@ -42,6 +43,18 @@ header {
     
     @media (max-width: 991px) {
       object-position: 82% top;
+    }
+  }
+
+  &.header--skalni-mesta > img {
+    // Abychom mohli obrázek posouvat nahoru/dolů, musíme ho uměle trochu zvětšit (jinak se zasekne na 100% výšce kvůli object-fit)
+    transform: scale(1.15);
+    transform-origin: center bottom; // 'bottom' znamená, že se obrázek posune dolů a ořízne se vršek
+    
+    @media (max-width: 991px) {
+      transform-origin: center 30%;
+          background-repeat: no-repeat;
+
     }
   }
 }

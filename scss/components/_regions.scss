@@ -54,15 +54,16 @@
   &__map {
     flex: 1;
     position: relative;
+    min-width: 0;
 
     .map-wrapper {
       position: relative;
       width: 100%;
 
-      svg {
-        width: 100%;
-        height: auto;
-        display: block;
+      svg, .svg-bg-icon {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
       }
     }
   }

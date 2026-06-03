@@ -14,7 +14,7 @@ const cssnano = require('cssnano');
 const settings = {
   browsersync: {
     baseDir: './', // Hlavní složka projektu, kde leží tvůj index.html
-    watch: ['*.html', '**/*.html'] // Sledujeme všechny HTML soubory
+    watch: ['*.html', '**/*.html', 'assets/js/**/*.js'] // Sledujeme HTML i JS soubory
   },
   css: {
     source: 'scss/screen.scss',

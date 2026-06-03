@@ -164,14 +164,12 @@
   background-color: $ice-grey-10;
 
   &:hover {
-    transform: translateY(-4px);
-
     .event-card__arrow {
       transform: translateX(4px);
     }
 
     .event-card__image {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 

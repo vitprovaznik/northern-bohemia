@@ -33,11 +33,13 @@
     align-items: center;
     gap: 0.5rem;
     span {
-      padding: 1rem;
+      padding: 0.75rem;
       background-color: white;
       display: flex;
       justify-content: center;
+      align-items: center;
       border-radius: 999px;
+      cursor: pointer;
     }
   }
   .left-buttons {
@@ -264,7 +266,7 @@
     }
 
     .slider-nav span {
-      padding: 0.75rem;
+      padding: 0.6rem;
     }
   }
 

@@ -155,8 +155,6 @@
   position: relative;
 
   &:hover {
-    transform: translateY(-4px);
-
     .magazine-card__arrow {
       transform: translateX(4px);
     }
@@ -185,7 +183,7 @@
   }
 
   &:hover &__image {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 
   &__content {

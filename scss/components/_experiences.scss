@@ -34,27 +34,7 @@
     z-index: 2;
 
     // Optional background pattern from the screenshot
-    &::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      right: -40px;
-      width: 150px;
-      height: 100px;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 5px,
-        $ice-grey-20 5px,
-        $ice-grey-20 10px
-      );
-      z-index: -1;
-      opacity: 0.5;
-
-      @media (max-width: 767px) {
-        display: none;
-      }
-    }
+    
   }
 
   &__link {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +9,6 @@
   </head>
   <body>
     <header>
-      <img
-        id="hero-bg-image"
-        src="/assets/images/context-images/hero-bg.png"
-        alt="Hero - Pozadi"
-      />
       <nav class="">
         <div class="container nav-container">
           <ul class="list-left">
@@ -75,8 +70,20 @@
             <li>
               <div class="lang-switcher">
                 <button class="lang-switcher__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   CZ
                 </button>
@@ -101,8 +108,20 @@
             <li>
               <div class="lang-switcher">
                 <button class="lang-switcher__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   CZ
                 </button>
@@ -116,65 +135,208 @@
           </ul>
         </div>
       </nav>
-      <section class="container hero">
-        <h1 class="hero_bigtext">
-          <span class="hero__text">Táhne </span>
-          <span class="hero__text">mě to </span>
-          <span class="hero__text">na Sever</span>
-        </h1>
-        <div class="hero__bottom">
-          <div class="left-buttons">
-            <a href="#" id="hero-link-winter">Zima v krkonoších</a>
-            <a href="#" id="hero-btn-experience" class="button button--blue">
-              <span>To chci zažít</span>
-              <span
-                class="svg-bg-icon"
-                style="
-                  background-image: url(&quot;/assets/images/no-context-images/icon_5a7d1102.svg&quot;);
-                  display: inline-block;
-                  width: 24px;
-                  max-width: 100%;
-                  height: auto;
-                  aspect-ratio: 24 / 24;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                "
-              ></span>
-            </a>
-          </div>
-          <div class="slider-nav">
-            <span id="hero-btn-prev">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M3.8284 6.77822L9.1924 1.41421L7.7782 0L0 7.77822L7.7782 15.5563L9.1924 14.1421L3.8284 8.77822H16V6.77822H3.8284Z"
-                  fill="#0E1D43"
-                />
-              </svg>
-            </span>
-            <span id="hero-btn-next">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M12.1716 6.77822L6.8076 1.41421L8.2218 0L16 7.77822L8.2218 15.5563L6.8076 14.1421L12.1716 8.77822H0V6.77822H12.1716Z"
-                  fill="#0E1D43"
-                />
-              </svg>
-            </span>
+      <div class="hero-slider">
+        <div id="world-wrapper">
+          <div id="world">
+            <div id="left-barrier"></div>
           </div>
         </div>
-      </section>
+        <div class="hero-slide active" data-theme="dark">
+          <img
+            class="hero-slide__bg"
+            src="/assets/images/context-images/hero-bg.png"
+            alt="Hero 1"
+          />
+          <div class="container hero">
+            <div class="hero__bottom">
+              <div class="left-buttons">
+                <a href="#" class="hero__sublink">Zima v krkonoších</a>
+                <a href="#" class="button button--blue">
+                  <span>To chci zažít</span>
+                  <span
+                    class="svg-bg-icon"
+                    style="
+                      background-image: url(&quot;/assets/images/no-context-images/icon_5a7d1102.svg&quot;);
+                      display: inline-block;
+                      width: 24px;
+                      max-width: 100%;
+                      height: auto;
+                      aspect-ratio: 24 / 24;
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                    "
+                  ></span>
+                </a>
+              </div>
+              <div class="slider-nav">
+                <span class="hero-btn-prev">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.8284 6.77822L9.1924 1.41421L7.7782 0L0 7.77822L7.7782 15.5563L9.1924 14.1421L3.8284 8.77822H16V6.77822H3.8284Z"
+                      fill="#0E1D43"
+                    />
+                  </svg>
+                </span>
+                <span class="hero-btn-next">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.1716 6.77822L6.8076 1.41421L8.2218 0L16 7.77822L8.2218 15.5563L6.8076 14.1421L12.1716 8.77822H0V6.77822H12.1716Z"
+                      fill="#0E1D43"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" data-theme="white">
+          <img
+            class="hero-slide__bg"
+            src="/assets/images/context-images/hero-bg-jizerky.png"
+            alt="Hero 2"
+          />
+          <div class="container hero">
+            <div class="hero__bottom">
+              <div class="left-buttons">
+                <a href="#" class="hero__sublink hero__sublink--white"
+                  >hero__sublink--white</a
+                >
+                <a href="#" class="button button--blue">
+                  <span>Více o horách</span>
+                  <span
+                    class="svg-bg-icon"
+                    style="
+                      background-image: url(&quot;/assets/images/no-context-images/icon_5a7d1102.svg&quot;);
+                      display: inline-block;
+                      width: 24px;
+                      max-width: 100%;
+                      height: auto;
+                      aspect-ratio: 24 / 24;
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                    "
+                  ></span>
+                </a>
+              </div>
+              <div class="slider-nav">
+                <span class="hero-btn-prev">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.8284 6.77822L9.1924 1.41421L7.7782 0L0 7.77822L7.7782 15.5563L9.1924 14.1421L3.8284 8.77822H16V6.77822H3.8284Z"
+                      fill="#0E1D43"
+                    />
+                  </svg>
+                </span>
+                <span class="hero-btn-next">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.1716 6.77822L6.8076 1.41421L8.2218 0L16 7.77822L8.2218 15.5563L6.8076 14.1421L12.1716 8.77822H0V6.77822H12.1716Z"
+                      fill="#0E1D43"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" data-theme="white">
+          <img
+            class="hero-slide__bg"
+            src="/assets/images/context-images/bg_hero-skalni-mesta.png"
+            alt="Hero 3"
+          />
+          <div class="container hero">
+            <div class="hero__bottom">
+              <div class="left-buttons">
+                <a href="#" class="hero__sublink hero__sublink--white"
+                  >hero__sublink--white</a
+                >
+                <a href="#" class="button button--blue">
+                  <span>Prozkoumat skály</span>
+                  <span
+                    class="svg-bg-icon"
+                    style="
+                      background-image: url(&quot;/assets/images/no-context-images/icon_5a7d1102.svg&quot;);
+                      display: inline-block;
+                      width: 24px;
+                      max-width: 100%;
+                      height: auto;
+                      aspect-ratio: 24 / 24;
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                    "
+                  ></span>
+                </a>
+              </div>
+              <div class="slider-nav">
+                <span class="hero-btn-prev">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M3.8284 6.77822L9.1924 1.41421L7.7782 0L0 7.77822L7.7782 15.5563L9.1924 14.1421L3.8284 8.77822H16V6.77822H3.8284Z"
+                      fill="#0E1D43"
+                    />
+                  </svg>
+                </span>
+                <span class="hero-btn-next">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.1716 6.77822L6.8076 1.41421L8.2218 0L16 7.77822L8.2218 15.5563L6.8076 14.1421L12.1716 8.77822H0V6.77822H12.1716Z"
+                      fill="#0E1D43"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1
+        class="hero_bigtext"
+        id="heading-source"
+        style="position: absolute; top: 0; pointer-events: none; opacity: 0"
+      >
+        Táhne mě to na Sever
+      </h1>
     </header>
     <main>
       <section class="regions">
@@ -224,8 +386,6 @@
                 background-position: center;
               "
             ></span>
-
-            >
           </div>
         </div>
       </section>
@@ -1066,6 +1226,9 @@
         </div>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=1.4" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="assets/js/main.js?v=1.7" defer></script>
+    <script src="assets/js/gravity.js"></script>
+    <script src="assets/js/mousecolision.js"></script>
   </body>
 </html>

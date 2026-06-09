@@ -1,33 +1,94 @@
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1;
+
+    &.prev {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      transition: none; /* starý obrázek jen čeká, než se přes něj prolné ten nový */
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: none;
+      z-index: 2; /* nový obrázek se vykreslí a prolné na vrchu */
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      z-index: -1;
+
+      @media (max-width: 991px) {
+        object-position: 35% top;
+      }
+    }
+  }
+}
+
 .hero {
   flex: 1;
   width: 100%;
+  height: 100%;
   padding-bottom: 8rem; // Pridan padding zespodu, aby obsah nebyl prilepeny uplne na hranu obrazku
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
+  pointer-events: none;
 
   @media (max-width: 1450px) {
     padding-left: 2rem;
     padding-right: 2rem;
   }
   @media (max-width: 991px) {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 
-  a {
+  a.hero__sublink {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 20px */
     letter-spacing: -0.2px;
-    color: $color-magnetic-blue;
+    transition: color 0.5s ease;
     text-decoration: none;
+    color: $color-magnetic-blue;
+
+    &--white {
+      color: #ffffff;
+    }
   }
   .hero__bottom {
     display: flex;
     justify-content: space-between;
+    pointer-events: auto;
+    position: relative;
+    z-index: 100;
   }
+
   .slider-nav {
     display: flex;
     align-items: center;
@@ -51,199 +112,20 @@
     }
   }
   .hero_bigtext {
-    position: relative;
-    height: 260px;
+    font-size: clamp(88px, 7.5vw, 112px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    color: $color-magnetic-blue;
 
-    .hero__text {
-      position: absolute;
-      font-size: clamp(88px, 7.5vw, 112px);
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      color: #0e1d43;
-      white-space: nowrap;
-
-      // APLIKACE JEDNÉ SPOLEČNÉ ANIMACE PRO VŠECHNA SLOVA
-      animation: suck-word 2s cubic-bezier(0.9, 0, 1, 1) both;
-
-      @media (max-width: 991px) {
-        font-size: clamp(64px, 12vw, 76px);
-      }
-
-      // =========================================================
-      // 1. SLOVO
-      // =========================================================
-      &:nth-child(1) {
-        // Výchozí hodnoty pro velký monitor
-        --start-top: 150px;
-        --start-left: 13%;
-        --end-top: 0px;
-        --end-left: 23%;
-        --end-rot: 20.771deg;
-
-        // Přepis pro mobily
-        @media (max-width: 1130px) {
-          --end-left: 22%;
-        }
-        @media (max-width: 991px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: 17%;
-        }
-        @media (max-width: 930px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: 13%;
-        }
-        @media (max-width: 850px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: 11%;
-        }
-        @media (max-width: 790px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: 7%;
-        }
-        @media (max-width: 750px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: 4%;
-        }
-        @media (max-width: 710px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: 0%;
-        }
-        @media (max-width: 570px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: -6%;
-        }
-        @media (max-width: 420px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: -6px;
-          --end-left: -6%;
-        }
-      }
-
-      // =========================================================
-      // 2. SLOVO
-      // =========================================================
-      &:nth-child(2) {
-        --start-top: 150px;
-        --start-left: 36%;
-        --end-top: 10px;
-        --end-left: 38%;
-        --end-rot: -3.008deg;
-
-        @media (max-width: 991px) {
-          --start-top: 70px;
-          --start-left: 31%;
-          --end-top: 0px;
-          --end-left: 35%;
-        }
-        @media (max-width: 930px) {
-          --start-top: 70px;
-          --start-left: 31%;
-          --end-top: 0px;
-          --end-left: 33%;
-        }
-        @media (max-width: 790px) {
-          --start-top: 70px;
-          --start-left: 31%;
-          --end-top: 0px;
-          --end-left: 30%;
-        }
-        @media (max-width: 750px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: 0px;
-          --end-left: 29%;
-        }
-        @media (max-width: 700px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: 0px;
-          --end-left: 27%;
-        }
-        @media (max-width: 570px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: 0px;
-          --end-left: 27%;
-        }
-        @media (max-width: 420px) {
-          --start-top: 70px;
-          --start-left: 2%;
-          --end-top: 0px;
-          --end-left: 30%;
-        }
-      }
-
-      // =========================================================
-      // 3. SLOVO
-      // =========================================================
-      &:nth-child(3) {
-        --start-top: 150px;
-        --start-left: 57%;
-        --end-top: 100px;
-        --end-left: 50%;
-        --end-rot: -16.66deg;
-
-        @media (max-width: 1350px) {
-          --end-top: 90px;
-        }
-        @media (max-width: 1240px) {
-          --end-top: 80px;
-        }
-
-        @media (max-width: 991px) {
-          --start-top: 70px;
-          --start-left: 60%;
-          --end-top: 77px;
-          --end-left: 48%;
-        }
-        @media (max-width: 470px) {
-          --start-top: 70px;
-          --start-left: 60%;
-          --end-top: 99px;
-          --end-left: 40%;
-        }
-        @media (max-width: 450px) {
-          --start-top: 70px;
-          --start-left: 60%;
-          --end-top: 99px;
-          --end-left: 30%;
-        }
-      }
+    @media (max-width: 991px) {
+      font-size: clamp(64px, 12vw, 76px);
     }
   }
 
-  // =========================================================
-  // JEDINÝ UNIVERZÁLNÍ KEYFRAME (Místo původních devíti!)
-  // =========================================================
-  @keyframes suck-word {
-    0% {
-      top: calc(var(--start-top) + var(--offset-top, 0px));
-      left: calc(var(--start-left) + var(--offset-left, 0%));
-      transform: rotate(0deg);
-      transform-origin: left center;
-    }
-    100% {
-      top: calc(var(--end-top) + var(--offset-top, 0px));
-      left: calc(var(--end-left) + var(--offset-left, 0%));
-      transform: rotate(var(--end-rot));
-      transform-origin: left center;
-    }
+  #heading-source {
+    opacity: 0;
   }
 
   // =========================================================
@@ -279,7 +161,11 @@
     left: 0;
     width: 100%;
     height: 60%; // Gradient pokryje spodní část obrázku
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
     z-index: 1;
     pointer-events: none;
   }
@@ -296,7 +182,7 @@
     .hero__breadcrumbs {
       font-size: 14px;
       font-weight: 400;
-      color: #0E1D43;
+      color: #0e1d43;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -307,7 +193,7 @@
       }
 
       .hero__breadcrumb-link {
-        color: #0E1D43;
+        color: #0e1d43;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -318,7 +204,7 @@
         color: black;
         font-weight: bold;
       }
-      
+
       .hero__breadcrumb-current {
         border: 1px solid black;
         padding: 6px 16px;
@@ -328,36 +214,12 @@
     }
 
     .hero_bigtext {
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: relative;
       width: 100%;
-      height: 100%;
-      pointer-events: none;
       z-index: 2;
-      // Posun přes CSS variables pouze pro text uvnitř (bez ovlivnění velikosti nebo posunu samotného kontejneru)
-      --offset-top: -40px;
-      --offset-left: 8%;
-      
-      @media (max-width: 991px) {
-        --offset-top: -30px;
-        --offset-left: 5%;
-      }
-
-      @media (max-width: 570px) {
-        --offset-top: -20px;
-        --offset-left: 2%;
-      }
-      
-      .hero__text {
-        // Animace je zachována, text se posune na svá výchozí místa
-        &:nth-child(1) {
-          // Jizerské
-        }
-        &:nth-child(2) {
-          // hory
-        }
-      }
+      padding-top: 1rem;
+      pointer-events: auto;
+      // Removes absolute positioning completely, so it just sits naturally under top row
     }
 
     .hero__bottom--subpage {
@@ -378,7 +240,7 @@
         background: transparent;
         backdrop-filter: none;
         padding: 0;
-        
+
         p {
           margin: 0;
           font-size: 18px;
@@ -394,11 +256,11 @@
         gap: 1rem;
         width: 100%;
         max-width: 600px; // Zarovnání s pravým okrajem textu
-        
+
         @media (max-width: 991px) {
           justify-content: space-between;
         }
-        
+
         .button--external {
           gap: 8px;
           display: flex;
@@ -408,7 +270,7 @@
         .hero__socials {
           display: flex;
           gap: 1rem;
-          
+
           .social-icon {
             background: transparent; // Průhledné pozadí
             width: 48px;
@@ -418,11 +280,11 @@
             align-items: center;
             justify-content: center;
             transition: transform 0.3s ease;
-            
+
             svg path {
               fill: white; // Bílé ikonky
             }
-            
+
             &:hover {
               transform: scale(1.1);
             }
@@ -430,5 +292,26 @@
         }
       }
     }
+  }
+}
+
+.word {
+  position: absolute;
+  font-size: 112px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: $color-magnetic-blue;
+  white-space: nowrap;
+  user-select: none;
+  cursor: grab;
+  pointer-events: auto;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 76px;
   }
 }

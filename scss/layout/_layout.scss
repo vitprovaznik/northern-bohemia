@@ -47,9 +47,9 @@ header {
   }
 
   &.header--skalni-mesta > img {
-    // Abychom mohli obrázek posouvat nahoru/dolů, musíme ho uměle trochu zvětšit (jinak se zasekne na 100% výšce kvůli object-fit)
+
     transform: scale(1.15);
-    transform-origin: center bottom; // 'bottom' znamená, že se obrázek posune dolů a ořízne se vršek
+    transform-origin: center bottom; 
     
     @media (max-width: 991px) {
       transform-origin: center 30%;

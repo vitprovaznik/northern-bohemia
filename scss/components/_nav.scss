@@ -75,6 +75,11 @@ nav {
     font-weight: 500;
     line-height: 100%;
     letter-spacing: -0.18px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 
   .menu-btn-mobile {
@@ -138,7 +143,7 @@ nav {
       }
     }
 
-    &:hover, &:focus-within {
+    &.is-open {
       .lang-switcher__dropdown {
         opacity: 1;
         visibility: visible;
@@ -146,6 +151,19 @@ nav {
       }
       .lang-switcher__btn svg {
         transform: rotate(180deg);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        .lang-switcher__dropdown {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+        .lang-switcher__btn svg {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -184,14 +202,11 @@ nav {
 
       // Původní skrytý stav
       max-height: 0;
-      opacity: 0;
+      opacity: 1;
       visibility: hidden;
       overflow: hidden;
-      transform: translateY(-10px);
       transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                  opacity 0.3s ease, 
-                  visibility 0.3s ease, 
-                  transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                  visibility 0s 0.4s;
     }
 
     .nav__mobile-list {
@@ -208,9 +223,9 @@ nav {
         letter-spacing: -0.01em;
         color: $color-magnetic-blue;
         cursor: pointer;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        
+        // Zrušeno opacity a transform fáze
+        opacity: 1;
 
         &:hover {
           color: $color-northern-blue;
@@ -228,21 +243,22 @@ nav {
         max-height: 400px;
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
         box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1) !important;
         border-bottom: none !important;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                    visibility 0s 0s;
       }
 
-      .nav__mobile-list li {
-        opacity: 1;
-        transform: translateY(0);
+    }
 
-        // Postupné objevování prvků (stagger animace)
-        @for $i from 1 through 6 {
-          &:nth-child(#{$i}) {
-            transition-delay: #{$i * 0.05}s;
-          }
-        }
+    // Pro mobilní menu otevíráme jazyky nahoru, aby se neusekly o overflow: hidden
+    .nav__mobile-list {
+      .lang-switcher__dropdown {
+        top: auto;
+        bottom: 100%;
+        margin-top: 0;
+        margin-bottom: 8px;
       }
     }
 

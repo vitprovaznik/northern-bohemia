@@ -15,12 +15,17 @@
         alt="Jizerské hory pozadí"
       />
       <div class="hero__bg-gradient"></div>
+      <div id="world-wrapper">
+        <div id="world">
+          <div id="left-barrier"></div>
+        </div>
+      </div>
       <nav class="">
         <div class="container nav-container">
           <ul class="list-left">
-            <li>Zážitky</li>
-            <li>Léto</li>
-            <li>Zima</li>
+            <li><a href="#">Zážitky</a></li>
+            <li><a href="#">Léto</a></li>
+            <li><a href="#">Zima</a></li>
           </ul>
           <a href="index.html" class="logo-north-bohemia">
             <span
@@ -55,9 +60,10 @@
             ></span>
           </button>
           <ul class="list-right">
-            <li>Kalendář akcí</li>
-            <li>Magazín</li>
+            <li><a href="#">Kalendář akcí</a></li>
+            <li><a href="#">Magazín</a></li>
             <li>
+              <a href="#">
               <span
                 class="svg-bg-icon"
                 style="
@@ -72,6 +78,7 @@
                   background-position: center;
                 "
               ></span>
+              </a>
             </li>
             <li>
               <div class="lang-switcher">
@@ -106,11 +113,11 @@
         <!-- Mobilní menu pro telefony -->
         <div class="nav__mobile-menu">
           <ul class="nav__mobile-list">
-            <li>Zážitky</li>
-            <li>Léto</li>
-            <li>Zima</li>
-            <li>Kalendář akcí</li>
-            <li>Magazín</li>
+            <li><a href="#">Zážitky</a></li>
+            <li><a href="#">Léto</a></li>
+            <li><a href="#">Zima</a></li>
+            <li><a href="#">Kalendář akcí</a></li>
+            <li><a href="#">Magazín</a></li>
             <li>
               <div class="lang-switcher">
                 <button class="lang-switcher__btn">
@@ -149,7 +156,7 @@
             <span class="hero__breadcrumb-current">Jizerské hory</span>
           </div>
         </div>
-        <h1 class="hero_bigtext">Jizerské Hory</h1>
+        <h1 class="hero_bigtext" id="heading-source" style="opacity: 0; pointer-events: none;">Jizerské Hory</h1>
         <div class="hero__bottom hero__bottom--subpage">
           <div class="hero__description">
             <p>
@@ -400,10 +407,9 @@
               ></span>
             </a>
           </div>
-        </div>
 
-        <div class="experiences__slider-wrapper">
-          <a href="#" class="experience-card">
+          <div class="experiences__slider-wrapper">
+            <a href="#" class="experience-card">
             <img
               src="/assets/images/context-images/cyklostezka-ploucnice.png"
               alt="Cyklostezka Odra-Nisa"
@@ -459,6 +465,7 @@
             </div>
           </a>
         </div>
+        </div>
 
         <div
           class="container experiences__controls-container"
@@ -466,43 +473,21 @@
         >
           <div class="experiences__controls">
             <button class="experiences__btn-prev" aria-label="Předchozí">
-              <span
-                class="svg-bg-icon"
-                style="
-                  background-image: url(&quot;/assets/images/no-context-images/icon_1728a148.svg&quot;);
-                  display: inline-block;
-                  width: 24px;
-                  max-width: 100%;
-                  height: auto;
-                  aspect-ratio: 24 / 24;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                "
-              ></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
             </button>
             <button class="experiences__btn-next" aria-label="Další">
-              <span
-                class="svg-bg-icon"
-                style="
-                  background-image: url(&quot;/assets/images/no-context-images/icon_23ea079d.svg&quot;);
-                  display: inline-block;
-                  width: 24px;
-                  max-width: 100%;
-                  height: auto;
-                  aspect-ratio: 24 / 24;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                "
-              ></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
             </button>
           </div>
         </div>
       </section>
 
       <!-- MAGAZÍN -->
-      <section class="magazine">
+      <section class="magazine magazine--jizerky">
         <div class="container magazine__container">
           <div class="magazine__top">
             <div class="magazine__title-wrapper">
@@ -534,7 +519,7 @@
             </a>
           </div>
           <div class="magazine__grid">
-            <article class="magazine-card">
+            <article class="magazine-card magazine-card--jizerky">
               <a href="#" class="magazine-card__link">
                 <div class="magazine-card__image-wrapper">
                   <img
@@ -572,7 +557,7 @@
                 </div>
               </a>
             </article>
-            <article class="magazine-card">
+            <article class="magazine-card magazine-card--jizerky">
               <a href="#" class="magazine-card__link">
                 <div class="magazine-card__image-wrapper">
                   <img
@@ -610,7 +595,7 @@
                 </div>
               </a>
             </article>
-            <article class="magazine-card">
+            <article class="magazine-card magazine-card--jizerky">
               <a href="#" class="magazine-card__link">
                 <div class="magazine-card__image-wrapper">
                   <img
@@ -648,7 +633,7 @@
                 </div>
               </a>
             </article>
-            <article class="magazine-card">
+            <article class="magazine-card magazine-card--jizerky">
               <a href="#" class="magazine-card__link">
                 <div class="magazine-card__image-wrapper">
                   <img
@@ -911,6 +896,9 @@
       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="assets/js/gravity.js"></script>
+    <script src="assets/js/mousecolision.js"></script>
     <script src="assets/js/main.js?v=1.7" defer></script>
   </body>
 </html>

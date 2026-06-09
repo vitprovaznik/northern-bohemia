@@ -14,12 +14,17 @@
         alt="Pískovcová skalní města pozadí"
       />
       <div class="hero__bg-gradient"></div>
+      <div id="world-wrapper">
+        <div id="world">
+          <div id="left-barrier"></div>
+        </div>
+      </div>
       <nav class="">
         <div class="container nav-container">
           <ul class="list-left">
-            <li>Zážitky</li>
-            <li>Léto</li>
-            <li>Zima</li>
+            <li><a href="#">Zážitky</a></li>
+            <li><a href="#">Léto</a></li>
+            <li><a href="#">Zima</a></li>
           </ul>
           <a href="index.html" class="logo-north-bohemia">
             <span
@@ -54,9 +59,10 @@
             ></span>
           </button>
           <ul class="list-right">
-            <li>Kalendář akcí</li>
-            <li>Magazín</li>
+            <li><a href="#">Kalendář akcí</a></li>
+            <li><a href="#">Magazín</a></li>
             <li>
+              <a href="#">
               <span
                 class="svg-bg-icon"
                 style="
@@ -71,6 +77,7 @@
                   background-position: center;
                 "
               ></span>
+              </a>
             </li>
             <li>
               <div class="lang-switcher">
@@ -105,11 +112,11 @@
         <!-- Mobilní menu pro telefony -->
         <div class="nav__mobile-menu">
           <ul class="nav__mobile-list">
-            <li>Zážitky</li>
-            <li>Léto</li>
-            <li>Zima</li>
-            <li>Kalendář akcí</li>
-            <li>Magazín</li>
+            <li><a href="#">Zážitky</a></li>
+            <li><a href="#">Léto</a></li>
+            <li><a href="#">Zima</a></li>
+            <li><a href="#">Kalendář akcí</a></li>
+            <li><a href="#">Magazín</a></li>
             <li>
               <div class="lang-switcher">
                 <button class="lang-switcher__btn">
@@ -150,7 +157,7 @@
             >
           </div>
         </div>
-        <h1 class="hero_bigtext">Pískovcová skalní města</h1>
+        <h1 class="hero_bigtext" id="heading-source" style="opacity: 0; pointer-events: none;">Pískovcová skalní města</h1>
         <div class="hero__bottom hero__bottom--subpage">
           <div class="hero__description">
             <p>
@@ -680,6 +687,9 @@
       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="assets/js/gravity.js"></script>
+    <script src="assets/js/mousecolision.js"></script>
     <script src="assets/js/main.js?v=1.7" defer></script>
   </body>
 </html>

@@ -30,6 +30,7 @@
     line-height: $line-height-h2;
     color: $color-magnetic-blue;
     margin: 0;
+    font-weight: 500;
     position: relative;
     z-index: 2;
 
@@ -68,8 +69,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
+    // Roztáhnout na celou šířku obrazovky s paddingem (např. 40px od kraje obrazovky)
+    width: calc(100vw - 80px);
+    margin-left: calc(-50vw + 50% + 40px);
+
     @media (max-width: 991px) {
       grid-template-columns: repeat(2, 1fr);
+      width: calc(100vw - 40px);
+      margin-left: calc(-50vw + 50% + 20px);
     }
 
     @media (max-width: 767px) {
@@ -91,22 +98,21 @@
     position: relative;
     z-index: 2;
 
-    // Fixní odsazení od okraje podle přání
+    // Vykročení z kontejneru na celou obrazovku
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
+    // Odsazení od okraje obrazovky (začíná u kraje)
     padding-left: 2rem;
     padding-right: 2rem;
     scroll-padding-left: 2rem;
     padding-bottom: 16px;
 
-    // Specifické styly pouze pro karty uvnitř slideru (aby to nerozbilo grid)
+    // Specifické styly pouze pro karty uvnitř slideru
     .experience-card {
-      // Exactly 3 cards fill the 1400px container width (1400px - 4rem padding - 48px gap)
-      flex: 0 0 calc((1400px - 4rem - 48px) / 3);
+      // Exactly 3 cards fill the 1400px container width
+      flex: 0 0 calc((min(100vw, 1400px) - 4rem - 48px) / 3);
       scroll-snap-align: start;
-      
-      @media (max-width: 1400px) {
-        // Exactly 3 cards fill the dynamic container width (100vw - 4rem padding)
-        flex: 0 0 calc((100vw - 4rem - 48px) / 3);
-      }
 
       @media (max-width: 991px) {
         // 2.2 cards on tablets so user sees more scrolling is possible
@@ -211,7 +217,7 @@
   &__title {
     font-size: 24px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 110%; /* 26.4px */
     letter-spacing: -0.24px;
     margin: 0;
@@ -221,7 +227,7 @@
   &__action {
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 120%; /* 19.2px */
     letter-spacing: -0.16px;
     display: inline-flex;

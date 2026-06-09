@@ -42,6 +42,31 @@ if (originalNav) {
   setupMobileMenu(originalNav);
   setupMobileMenu(clonedNav);
 
+  // 4. Nastavení pro přepínač jazyků (kliknutí na mobilu/desktopu)
+  const setupLangSwitcher = (navElement) => {
+    const langSwitchers = navElement.querySelectorAll(".lang-switcher");
+    langSwitchers.forEach((switcher) => {
+      const btn = switcher.querySelector(".lang-switcher__btn");
+      if (btn) {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = switcher.classList.contains("is-open");
+          
+          // Zavřít všechny ostatní pro jistotu
+          document.querySelectorAll(".lang-switcher").forEach(s => s.classList.remove("is-open"));
+          
+          if (!isOpen) {
+            switcher.classList.add("is-open");
+          }
+        });
+      }
+    });
+  };
+
+  setupLangSwitcher(originalNav);
+  setupLangSwitcher(clonedNav);
+
   // Závření menu při kliknutí mimo
   document.addEventListener("click", (e) => {
     [originalNav, clonedNav].forEach((navElement) => {
@@ -54,6 +79,11 @@ if (originalNav) {
         if (btn) btn.classList.remove("is-active");
       }
     });
+
+    // Zavření lang switcheru při kliknutí mimo
+    if (!e.target.closest(".lang-switcher")) {
+      document.querySelectorAll(".lang-switcher").forEach(s => s.classList.remove("is-open"));
+    }
   });
 }
 

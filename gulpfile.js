@@ -35,7 +35,10 @@ function makecss() {
   return gulp.src(settings.css.source)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sassGlob())
-    .pipe(sass({ style: 'expanded' }))
+    .pipe(sass({ 
+      style: 'expanded',
+      silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'color-functions']
+    }))
     .pipe(postcss([
       autoprefixer({ overrideBrowserslist: ['last 2 versions', 'ios >= 7', 'android >= 4.4'] }),
       cssnano()

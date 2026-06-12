@@ -34,8 +34,36 @@
     position: relative;
     z-index: 2;
 
-    // Optional background pattern from the screenshot
-    
+    // Background pattern
+  }
+
+  &__decorations {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    width: 60%;
+    height: 140%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 1;
+    transform: rotate(15deg) translateY(-10%);
+  }
+
+  &__deco {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    background: $color-crystal-white;
+
+    @media (max-width: 991px) {
+      background: #B1EAEC;
+    }
+
+    &--1 { left: 0%; }
+    &--2 { left: 30%; }
+    &--3 { left: 60%; top: 30%; }
   }
 
   &__link {

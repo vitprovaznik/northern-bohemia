@@ -63,20 +63,20 @@
             <li><a href="#">Magazín</a></li>
             <li>
               <a href="#">
-              <span
-                class="svg-bg-icon"
-                style="
-                  background-image: url(&quot;/assets/images/no-context-images/icon_0a3ebf79.svg&quot;);
-                  display: inline-block;
-                  width: 24px;
-                  max-width: 100%;
-                  height: auto;
-                  aspect-ratio: 24 / 24;
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                "
-              ></span>
+                <span
+                  class="svg-bg-icon"
+                  style="
+                    background-image: url(&quot;/assets/images/no-context-images/icon_0a3ebf79.svg&quot;);
+                    display: inline-block;
+                    width: 24px;
+                    max-width: 100%;
+                    height: auto;
+                    aspect-ratio: 24 / 24;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  "
+                ></span>
               </a>
             </li>
             <li>
@@ -157,7 +157,13 @@
             >
           </div>
         </div>
-        <h1 class="hero_bigtext" id="heading-source" style="opacity: 0; pointer-events: none;">Pískovcová skalní města</h1>
+        <h1
+          class="hero_bigtext"
+          id="heading-source"
+          style="opacity: 0; pointer-events: none"
+        >
+          Pískovcová skalní města
+        </h1>
         <div class="hero__bottom hero__bottom--subpage">
           <div class="hero__description">
             <p>
@@ -344,8 +350,8 @@
           <div class="places__deco places__deco--2"></div>
         </div>
 
-        <div class="container places__container">
-          <div class="places__top">
+        <div class="places__container">
+          <div class="places__top container">
             <h2 class="places__title">Co navštívit?</h2>
             <div class="places__controls">
               <button class="places__btn-prev" aria-label="Předchozí">
@@ -386,15 +392,18 @@
                 />
               </div>
               <div class="places-card__content">
-                <h3 class="places-card__title">Český ráj</h3>
-                <p class="places-card__desc">
-                  Kouzelný kraj na severu Čech, kde se snoubí hluboké lesy,
-                  tajuplná rašeliniště, vodopády a malebná údolí, na která lze
-                  shlížet z mnoha rozhleden. Jizerské hory nadchnou milovníky
-                  turistiky, cyklistiky i zimního běžeckého lyžování. Přijďte
-                  objevit místo bohaté na historii a přírodní krásy, které vás
-                  přitáhne svou jedinečnou atmosférou.
-                </p>
+                <div>
+                  <h3 class="places-card__title">Český ráj</h3>
+                  <p class="places-card__desc">
+                    Kouzelný kraj na severu Čech, kde se snoubí hluboké lesy,
+                    tajuplná rašeliniště, vodopády a malebná údolí, na která lze
+                    shlížet z mnoha rozhleden. Jizerské hory nadchnou milovníky
+                    turistiky, cyklistiky i zimního běžeckého lyžování. Přijďte
+                    objevit místo bohaté na historii a přírodní krásy, které vás
+                    přitáhne svou jedinečnou atmosférou.
+                  </p>
+                </div>
+
                 <a href="#" class="places-card__link">
                   To mě zaujalo
                   <svg
@@ -423,15 +432,17 @@
                 />
               </div>
               <div class="places-card__content">
-                <h3 class="places-card__title">České Švýcarsko</h3>
-                <p class="places-card__desc">
-                  Kouzelný kraj na severu Čech, kde se snoubí hluboké lesy,
-                  tajuplná rašeliniště, vodopády a malebná údolí, na která lze
-                  shlížet z mnoha rozhleden. Jizerské hory nadchnou milovníky
-                  turistiky, cyklistiky i zimního běžeckého lyžování. Přijďte
-                  objevit místo bohaté na historii a přírodní krásy, které vás
-                  přitáhne svou jedinečnou atmosférou.
-                </p>
+                <div>
+                  <h3 class="places-card__title">České Švýcarsko</h3>
+                  <p class="places-card__desc">
+                    Kouzelný kraj na severu Čech, kde se snoubí hluboké lesy,
+                    tajuplná rašeliniště, vodopády a malebná údolí, na která lze
+                    shlížet z mnoha rozhleden. Jizerské hory nadchnou milovníky
+                    turistiky, cyklistiky i zimního běžeckého lyžování. Přijďte
+                    objevit místo bohaté na historii a přírodní krásy, které vás
+                    přitáhne svou jedinečnou atmosférou.
+                  </p>
+                </div>
                 <a href="#" class="places-card__link">
                   To mě zaujalo
                   <svg
@@ -456,7 +467,7 @@
       </section>
 
       <iframe
-        style="border: none; width: 100%; height: 700px"
+        style="display: block; border: none; width: 100%; height: 700px"
         src="https://mapy.com/s/porufokeko"
         width="400"
         height="280"
@@ -612,7 +623,7 @@
             </div>
           </div>
 
-          <hr class="footer__divider" />
+          <hr class="footer__divider footer__divider--blue" />
 
           <!-- Middle row -->
           <div class="footer__row footer__row--middle">

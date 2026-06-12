@@ -275,13 +275,17 @@
 
           .social-icon {
             background: transparent; // Průhledné pozadí
-            width: 48px;
-            height: 48px;
+            /* width: 48px;
+            height: 48px; */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: transform 0.3s ease;
+
+            .svg-bg-icon {
+              filter: brightness(0) invert(1);
+            }
 
             svg path {
               fill: white; // Bílé ikonky

@@ -143,17 +143,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
+    const nextSlide = () => {
+      currentIndex = currentIndex === total - 1 ? 0 : currentIndex + 1;
+      updateSlider(currentIndex);
+    };
+
+    let autoplayInterval = setInterval(nextSlide, 5000);
+
+    const resetAutoplay = () => {
+      clearInterval(autoplayInterval);
+      autoplayInterval = setInterval(nextSlide, 5000);
+    };
+
     btnPrevs.forEach((btn) => {
       btn.addEventListener("click", () => {
         currentIndex = currentIndex === 0 ? total - 1 : currentIndex - 1;
         updateSlider(currentIndex);
+        resetAutoplay();
       });
     });
 
     btnNexts.forEach((btn) => {
       btn.addEventListener("click", () => {
-        currentIndex = currentIndex === total - 1 ? 0 : currentIndex + 1;
-        updateSlider(currentIndex);
+        nextSlide();
+        resetAutoplay();
       });
     });
   }

@@ -336,51 +336,11 @@
 
       <!-- ZÁŽITKY SLIDER SEKCE -->
       <section class="experiences">
-        <!-- Pozadí (bílé šikmé pruhy) -->
-        <div
-          style="
-            position: absolute;
-            top: -20%;
-            right: 0;
-            width: 60%;
-            height: 140%;
-            z-index: 1;
-            pointer-events: none;
-            overflow: hidden;
-            opacity: 1;
-            transform: rotate(15deg) translateY(-10%);
-          "
-        >
-          <div
-            style="
-              position: absolute;
-              top: 0;
-              left: 0%;
-              width: 120px;
-              height: 100%;
-              background: white;
-            "
-          ></div>
-          <div
-            style="
-              position: absolute;
-              top: 0;
-              left: 30%;
-              width: 120px;
-              height: 100%;
-              background: white;
-            "
-          ></div>
-          <div
-            style="
-              position: absolute;
-              top: 30%;
-              left: 60%;
-              width: 120px;
-              height: 100%;
-              background: white;
-            "
-          ></div>
+        <!-- Pozadí (šikmé pruhy) -->
+        <div class="experiences__decorations">
+          <div class="experiences__deco experiences__deco--1"></div>
+          <div class="experiences__deco experiences__deco--2"></div>
+          <div class="experiences__deco experiences__deco--3"></div>
         </div>
 
         <div
@@ -821,7 +781,7 @@
             </div>
           </div>
 
-          <hr class="footer__divider" />
+          <hr class="footer__divider footer__divider--blue" />
 
           <!-- Middle row -->
           <div class="footer__row footer__row--middle">
